@@ -34,6 +34,8 @@ body {
     padding: 80px 20px;
     display: flex;
     justify-content: center;
+    margin-top: 100px;
+    gap: 10px;
 }
 
 /* Card Box */
@@ -163,7 +165,7 @@ input, textarea {
 }
 
 
-
+/*projects*/
 
 body {
     margin: 0;
@@ -199,6 +201,7 @@ body {
     width: 90%;
     max-width: 1200px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-top: 100px;
   }
   
   .section-title {
@@ -235,7 +238,7 @@ body {
   .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 10px;
   }
   
   .box {
