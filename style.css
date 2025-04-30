@@ -67,6 +67,18 @@ body {
     border: 4px solid #fff;
 }
 
+/*about*/
+.social a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+ .social a:hover {
+    color: #1e90ff;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
