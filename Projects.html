@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Portfolio </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+
+    <body>
+
+        <!-- header-->
+        <header class="header" >
+            <a href="#home" class="logo">Portfolio</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html" >Home</a>
+                <a href="index.html#resume" >Resume</a>
+                <a href="Blogs.html" >Blogs</a>
+                <a href="Projects.html" >Projects</a>
+                <a href="index.html#contact" >Contact</a>
+                
+            </nav>
+        </header>
+
+        <div class="animated-background"></div>
+
+        <section class="section-box" id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="tabs">
+            <button class="tab-btn active" data-tab="all">All</button>
+            <button class="tab-btn" data-tab="web">Web Projects</button>
+            <button class="tab-btn" data-tab="mobile">Mobile Projects</button>
+            <button class="tab-btn" data-tab="other">Other</button>
+            </div>
+
+            <div class="box-container">
+            <div class="box" data-category="web">
+                <img src="Assets/Artisanique GUI.png" alt="Artisanique">
+                <div class="content">
+                <h3>Artisanique</h3>
+                <p class="pr-text">Crafted UI using React and Bootstrap with a dynamic event portal experience.</p>
+                <a href="Projects/Artisanique.html" class="btn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="mobile">
+                <img src="Assets/Travel Tales.png" alt="Travel Tales">
+                <div class="content">
+                <h3>Travel Tales</h3>
+                <p class="pr-text">Mobile app concept for sharing travel diaries with geo-tagged visuals and reviews.</p>
+                <a href="Projects/TravelTale.html" class="btn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="web">
+                <img src="Assets/Scoop.png" alt="Scoop">
+                <div class="content">
+                <h3>Scoop</h3>
+                <p class="pr-text">Blog-style platform with clean aesthetics and integrated comment system.</p>
+                <a href="Projects/Scoop.html" class="btn">See More</a>
+                </div>
+            </div>
+
+            <div class="box" data-category="other">
+                <img src="Assets/EventAura.png" alt="EventAura">
+                <div class="content">
+                <h3>EventAura</h3>
+                <p class="pr-text">Event management system with Laravel backend and Inertia.js frontend.</p>
+                <a href="Projects/EventAura.html" class="btn">See More</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <script>
+            const tabs = document.querySelectorAll('.tab-btn');
+            const boxes = document.querySelectorAll('.box');
+
+            tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelector('.tab-btn.active').classList.remove('active');
+                tab.classList.add('active');
+
+                const tabName = tab.getAttribute('data-tab');
+
+                boxes.forEach(box => {
+                if (tabName === 'all' || box.dataset.category === tabName) {
+                    box.style.display = 'flex';
+                } else {
+                    box.style.display = 'none';
+                }
+                });
+            });
+            });
+        </script>
+
+        <script>
+            const menuIcon = document.getElementById("menu-icon");
+            const navbar = document.getElementById("navbar");
+
+            menuIcon.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+            });
+        </script>
+
+
+        
+
+        
+
+    </body>
